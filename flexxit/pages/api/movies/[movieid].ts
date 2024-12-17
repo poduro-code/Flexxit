@@ -11,14 +11,14 @@ export default async function handler(req: NextApiRequest, res:NextApiResponse) 
     try {
         await serverAuth(req);
 
-        const {movieId} = req.query;
+        const { movieId } = req.query;
 
         if (typeof movieId !== 'string') {
             throw new Error('Invalid ID');
                 }
         
         if (!movieId) {
-            throw new Error('Invalid ID')
+            throw new Error('Invalid ID');
         }
 
         const movie = await prismadb.movie.findUnique({

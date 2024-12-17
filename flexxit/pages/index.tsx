@@ -44,7 +44,7 @@ export default function Home() {
       <Navbar />      
       <BillBoard />
       <div className="pb-40">
-        <MovieList title="Trending Now" data={clientMovies} />
+        <MovieList title="Trending Now" data={movies} />
         <MovieList title="My list" data={favourites} />
       </div>
     </>

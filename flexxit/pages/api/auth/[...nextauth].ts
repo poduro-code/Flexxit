@@ -37,7 +37,7 @@ export default NextAuth({
 
         const user = await prismadb.user.findUnique({
           where: {
-            email: credentials.email, // Corrected typo here
+            email: credentials.email, 
           },
         });
 
@@ -61,7 +61,7 @@ export default NextAuth({
   pages: {
     signIn: '/auth',
   },
-  debug: process.env.NODE_ENV === 'development', // Corrected comparison
+  debug: process.env.NODE_ENV === 'development', 
   adapter: PrismaAdapter(prismadb),
   session: {
     strategy: 'jwt',

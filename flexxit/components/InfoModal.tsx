@@ -70,7 +70,6 @@ const InfoModal: React.FC<InfoModalProps> = ({visible, onClose}) => {
                 <div className="relative h-96"> 
                 <video 
                 className="w-full brightness-[60%] h-full object-cover"
-
                 autoPlay
                 muted
                 loop
